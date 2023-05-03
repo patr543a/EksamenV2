@@ -66,6 +66,8 @@ main > .wrapper {
     color: var(--white);
     font-weight: bold;
     text-align: center;
+    font-size: small;
+    padding: 0.5rem;
 }
 
 /* Article styling */
@@ -210,6 +212,12 @@ form.article-main > p {
 }
 
 /* Media */
+@media screen and (min-width: 768px) {
+    #hero2-content {
+        font-size: medium;
+    }
+}
+
 @media screen and (min-width: 960px) {
     main > .wrapper {
         display: grid;
