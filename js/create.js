@@ -9,21 +9,18 @@ const eventList = document.querySelector('.event-list');
 // Creates elements on the screen
 function createEvents() {
     data.events.forEach(event => {
-        const date = createElement(event.date);
-        const description = createElement(event.event);
+        // Make elementa
+        const date = document.createElement('p');
+        const description = document.createElement('p');
 
+        // Set text
+        date.innerHTML = event.date;
+        description.innerHTML = event.event;
+
+        // Add elements
         eventList.appendChild(date);
         eventList.appendChild(description);
     });
-}
-
-// Quick access to document.createElement
-function createElement(innerHTML) {
-    const element = document.createElement('p');
-
-    element.innerHTML = innerHTML;
-    
-    return element;
 }
 
 // Export
