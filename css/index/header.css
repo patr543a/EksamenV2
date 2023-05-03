@@ -116,6 +116,16 @@ nav {
     100% { transform: translate(0, -200%); }
 }
 
+@-webkit-keyframes slideIn {
+    0% { transform: translate(0, -200%); }
+    100% { transform: none; }
+}
+
+@-webkit-keyframes slideOut {
+    0% { transform: none; }
+    100% { transform: translate(0, -200%); }
+}
+
 /* Media */
 @media screen and (min-width: 960px) {
     .nav-opener {

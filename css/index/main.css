@@ -189,6 +189,26 @@ form.article-main > p {
     100% { opacity: 0; transform: translate(50%, 0); }
 }
 
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeInSlide {
+    0% { opacity: 0; transform: translate(-50%, 0); }
+    100% { opacity: 1; transform: none; }
+}
+
+@-webkit-keyframes fadeOutSlide {
+    0% { opacity: 1; transform: none; }
+    100% { opacity: 0; transform: translate(50%, 0); }
+}
+
 /* Media */
 @media screen and (min-width: 960px) {
     main > .wrapper {
