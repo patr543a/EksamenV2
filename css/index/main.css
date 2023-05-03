@@ -162,6 +162,7 @@ form.article-main > button {
     color: var(--white);
     font-size: medium;
     font-weight: bold;
+    cursor: pointer;
 }
 
 form.article-main > p {
