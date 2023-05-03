@@ -1,0 +1,167 @@
+/* General styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: none;
+}
+
+/* Container styling */
+header > .wrapper {
+    background: var(--white);
+    box-shadow: 0 5px 10px gray;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* Container item styling */
+.header-container > * {
+    padding: 1rem;
+}
+
+/* Nav styling mobile */
+nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    background: var(--secondary-color);
+    padding: 0 !important;
+    animation: slideIn 1s ease 0s 1;
+    z-index: 9;
+}
+
+.nav-items {
+    width: 100%;
+    list-style: none;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background .75s;
+}
+
+.nav-item-link.at {
+    background: var(--primary-color);
+}
+
+.nav-item-text {
+    color: var(--white);
+}
+
+/* Social styling */
+.header-socials {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    padding: .5rem;
+}
+
+.social-item {
+    padding: 5px;
+    height: 100%;
+}
+
+.social-link {
+    height: 100%;
+}
+
+.social-icon {
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Hamburger styling */
+.nav-opener {
+    height: 100%;
+    border: none;
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: background .75s;
+}
+
+.hamburger-icon {
+    height: 100%;
+}
+
+.nav-opener:hover {
+    background: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { transform: translate(0, -200%); }
+    100% { transform: none; }
+}
+
+@keyframes slideOut {
+    0% { transform: none; }
+    100% { transform: translate(0, -200%); }
+}
+
+/* Media */
+@media screen and (min-width: 960px) {
+    .nav-opener {
+        display: none;
+    }
+
+    nav {
+        display: initial;
+        position: initial;
+        width: fit-content;
+        height: 100%;
+        animation: none;
+        background: none;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        height: 100%;
+    }
+
+    .nav-item-link {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding: 0 1.8rem;
+    }
+
+    .nav-item-text {
+        text-align: center;
+        font-weight: bold;
+        font-size: large;
+        white-space: nowrap;
+        transition: color .75s;
+    }
+
+    .nav-item-link:not(.at) > p {
+        color: black;
+    }
+
+    .nav-item:hover > a {
+        background: var(--secondary-color);
+    }
+
+    .nav-item:hover p {
+        color: var(--white);
+    }
+}
